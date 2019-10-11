@@ -13,6 +13,11 @@ class CognusCard extends HTMLElement {
   }
   connectedCallback() {
     const template = `
+    <style>
+      cognus-card{
+        display: flex;
+      }
+    </style>
     <div
       class="w-full md:mx-1 bg-white rounded-lg p-6 cursor-pointer shadow-md"
     >
