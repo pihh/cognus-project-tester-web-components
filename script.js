@@ -25,7 +25,7 @@ class CognusCard extends HTMLElement {
         >
           <span class="flex rounded-full py-1 mr-3">Run</span>
           <svg
-            class="fill-current opacity-75 h-4 w-4 mt-1"
+            class="fill-current opacity-75 h-4 w-4 mb-1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
           >
