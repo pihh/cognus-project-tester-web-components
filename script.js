@@ -58,7 +58,7 @@ class CognusCard extends HTMLElement {
   }
 
   _updateRendering() {
-    console.log("Update rendering");
+    //console.log("Update rendering");
   }
 }
 
@@ -104,7 +104,7 @@ class CognusDescription extends HTMLElement {
   }
 
   _updateRendering() {
-    console.log("Update rendering");
+    //.log("Update rendering");
   }
 }
 
