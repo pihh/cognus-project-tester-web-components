@@ -13,11 +13,6 @@ class CognusCard extends HTMLElement {
   }
   connectedCallback() {
     const template = `
-    <style>
-      cognus-card{
-        display: flex;
-      }
-    </style>
     <div
       class="w-full md:mx-1 bg-white rounded-lg p-6 cursor-pointer shadow-md"
     >
@@ -25,7 +20,7 @@ class CognusCard extends HTMLElement {
         <div class="text-gray-700 ellipsis">${this.category}</div>
         <h2 class="text-lg font-semibold">${this.name}</h2>
         <div
-          class="p-0 items-center text-indigo-600 leading-none lg:rounded-full flex lg:inline-flex"
+          class="p-0 items-center text-indigo-600 leading-none lg:rounded-full flex lg:inline-flex run-action"
           role="alert"
         >
           <span class="flex rounded-full py-1 mr-3">Run</span>

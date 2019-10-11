@@ -18,7 +18,23 @@
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 cognus-card {
-    display: flex !important;
+  display: flex !important;
+}
+
+.run-action{
+  display: -webkit-inline-flex~!important;
+  display: -moz-inline-flex !important;
+  display: inline-flex !important;
+
+  -webkit-flex-flow: row nowrap !important;
+  -moz-flex-flow: row nowrap !important;
+  flex-flow: row nowrap !important;
+
+  -webkit-align-items: flex-end !important;
+  -moz-align-items: flex-end !important;
+  align-items: flex-end !important;
+
+  height: calc( 100% - 50px ) !important
 }
 /* Document
    ========================================================================== */
