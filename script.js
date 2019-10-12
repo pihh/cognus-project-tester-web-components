@@ -147,6 +147,13 @@ customElements.define("cognus-hr", CognusHr);
 customElements.define("cognus-description", CognusDescription);
 customElements.define("cognus-card", CognusCard);
 
+// BOOT SIMPLE BAR
+window.onload = function() {
+  setTimeout(function() {
+    new SimpleBar(document.getElementById("container"));
+  }, 10);
+};
+
 // SIMPLE BAR
 /**
  * SimpleBar.js - v4.2.3
@@ -2620,9 +2627,4 @@ customElements.define("cognus-card", CognusCard);
   );
 });
 
-// BOOT SIMPLE BAR
-window.onload = function() {
-  setTimeout(function() {
-    new SimpleBar(document.getElementById("container"));
-  }, 10);
-};
+
