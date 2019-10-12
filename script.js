@@ -4,7 +4,7 @@ class CognusCard extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["name", "category"];
+    return ["name", "category", "action"];
   }
   //
   attributeChangedCallback(name, oldValue, newValue) {
@@ -23,7 +23,7 @@ class CognusCard extends HTMLElement {
           class="p-0 items-center text-indigo-600 leading-none lg:rounded-full flex lg:inline-flex run-action"
           role="alert"
         >
-          <span class="flex rounded-full py-1 mr-3">Run</span>
+          <span class="flex rounded-full py-1 mr-3">${this.action}</span>
           <svg
             class="fill-current opacity-75 h-4 w-4 mb-1"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,6 +39,14 @@ class CognusCard extends HTMLElement {
     `;
 
     this.innerHTML = template;
+  }
+
+  get action() {
+    return this.getAttribute("action") || "Run";
+  }
+
+  set action(v) {
+    this.setAttribute("action", v);
   }
 
   get name() {
