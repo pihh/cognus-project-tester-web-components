@@ -2,10 +2,12 @@ class CognusCard extends HTMLElement {
   constructor() {
     super();
     this.addEventListener("click", e => {
-      if (!this.href) {
-        return;
+      if (this.href) {
+        window.location.href = this.href;
       }
-      window.location.href = this.href;
+      if (this.action) {
+        window[this.action]();
+      }
     });
   }
 
