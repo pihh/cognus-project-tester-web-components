@@ -244,9 +244,9 @@ customElements.define("cognus-li", CognusLi);
 customElements.define("cognus-hr", CognusHr);
 customElements.define("cognus-description", CognusDescription);
 customElements.define("cognus-card", CognusCard);
-customElements.define("cognus-repeat", CognusRepeat);
+// customElements.define("cognus-repeat", CognusRepeat);
 
-// document.registerElement("cognus-repeat", CognusRepeat);
+document.registerElement("cognus-repeat", CognusRepeat);
 
 // SIMPLE BAR
 /**
