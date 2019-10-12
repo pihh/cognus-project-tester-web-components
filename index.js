@@ -167,10 +167,86 @@ class CognusLi extends HTMLElement {
     this.innerHTML = template;
   }
 }
+
+class CognusRepeat extends HTMLElement {
+  constructor() {
+    super();
+  }
+  createdCallback() {
+    if (this.getAttribute("shadow")) {
+      this.attachShadow({ mode: "open" });
+    } else {
+      if (!this.template) this.template = this.innerHTML;
+      this.render();
+    }
+  }
+  attachedCallback() {
+    this.render();
+  }
+  render() {
+    if (!this.template) this.template = this.innerHTML;
+
+    const content = CognusRepeat.fromJson(this.getAttribute("content"));
+    const element = this.getAttribute("element");
+    const template = this.template;
+
+    let html = element !== null ? "<" + element.toLowerCase() + ">" : "";
+
+    if (Array.isArray(content)) {
+      content.forEach(function(item) {
+        html += CognusRepeat.interpolate(template, item);
+      });
+    } else {
+      throw new Error("Content should be an Array of objects.");
+    }
+    html += element !== null ? "</" + element.toLowerCase() + ">" : "";
+    if (this.getAttribute("shadow")) {
+      this.shadowRoot.innerHTML = html;
+      this.innerHTML = "";
+    } else {
+      this.innerHTML = html;
+    }
+  }
+  attributeChangedCallback(name) {
+    console.log({ name });
+    switch (name) {
+      case "content":
+        this.render();
+        break;
+    }
+  }
+  static interpolate(template, obj) {
+    if (typeof obj == "object") {
+      for (var key in obj) {
+        const find = "${" + key + "}";
+        if (template.indexOf(find) > -1) {
+          template = template.replace(find, obj[key]);
+          delete obj[key];
+        }
+      }
+    }
+    return template;
+  }
+  static fromJson(str) {
+    let obj = null;
+    if (typeof str == "string") {
+      try {
+        obj = JSON.parse(str);
+      } catch (e) {
+        throw new Error("Invalid JSON string provided. ");
+      }
+    }
+    return obj;
+  }
+}
+
 customElements.define("cognus-li", CognusLi);
 customElements.define("cognus-hr", CognusHr);
 customElements.define("cognus-description", CognusDescription);
 customElements.define("cognus-card", CognusCard);
+customElements.define("cognus-repeat", CognusRepeat);
+
+// document.registerElement("cognus-repeat", CognusRepeat);
 
 // SIMPLE BAR
 /**

@@ -1,0 +1,23 @@
+{
+  "name": "cognus-project-tester-web-components",
+  "version": "1.0.0",
+  "description": "Web components for cognus documentation\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C and personal projects documentation ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pihh/cognus-project-tester-web-components.git"
+  },
+  "keywords": [
+    "web-components",
+    "learning"
+  ],
+  "author": "pihh - filipemotasa\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[CFilipe S\u001b[2~á aka Pihh - filipemotasa@hotmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pihh/cognus-project-tester-web-components/issues"
+  },
+  "homepage": "https://github.com/pihh/cognus-project-tester-web-components#readme"
+}
