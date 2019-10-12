@@ -143,6 +143,29 @@ class CognusHr extends HTMLElement {
   }
 }
 
+class CognusLi extends HTMLElement {
+  constructor() {
+    super();
+  }
+  get text() {
+    return this.getAttribute("text");
+  }
+  set text(v) {
+    return this.setAttribute("text", v);
+  }
+  connectedCallback() {
+    const template = `
+      <li class="text-gray-700 flex mb-2">
+        <img
+          src="https://cdn.jsdelivr.net/gh/pihh/cognus-project-tester-web-components/icons/checkmark-solid.svg"
+          class="h-5 float-left mr-2 mt-1"
+        >${this.text}</li>
+    `;
+
+    this.innerHTML = template;
+  }
+}
+customElements.define("cognus-li", CognusLi);
 customElements.define("cognus-hr", CognusHr);
 customElements.define("cognus-description", CognusDescription);
 customElements.define("cognus-card", CognusCard);
@@ -2626,5 +2649,3 @@ window.onload = function() {
     or
   );
 });
-
-
