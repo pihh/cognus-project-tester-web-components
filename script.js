@@ -26,7 +26,7 @@ class CognusCard extends HTMLElement {
         <div class="text-gray-700 ellipsis">${this.category}</div>
         <h2 class="text-lg font-semibold">${this.name}</h2>
         <div
-          class="p-0 items-center text-indigo-600 leading-none lg:rounded-full flex lg:inline-flex run-action"
+          class="p-0 items-center text-indigo-600 leading-none lg:rounded-full flex lg:inline-flex "
           role="alert"
         >
           <span class="flex rounded-full py-1 mr-3">${this.action}</span>
