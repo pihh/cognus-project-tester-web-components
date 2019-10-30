@@ -6,7 +6,7 @@ class CognusCard extends HTMLElement {
         window.location.href = this.href;
       }
       if (this.action) {
-        window[this.action]();
+        this[action]();
       }
     });
   }

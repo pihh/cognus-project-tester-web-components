@@ -1,0 +1,132 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <link href="dist/styles.css" rel="stylesheet" />
+    <!--
+    <script src="https://cdn.jsdelivr.net/gh/pihh/cognus-project-tester-web-components@1.0.1/index.js"></script>
+	-->
+  </head>
+
+  <body>
+    <div class="container mx-auto px-4 py-8" id="container">
+      <div>
+        <img
+          src="https://cdn.jsdelivr.net/gh/pihh/cognus-project-tester-web-components@1.0.1/logo.png"
+          class="h-10 float-left mr-2"
+        />
+        <div class=" font-bold text-3xl mb-5">BlueDarwin Manual Testing</div>
+      </div>
+      <div class="md:ml-12">
+        <div class="flex mb-4 mt-4">
+          <div class="lg:w-1/3 md:w-1/2 mb-3">
+            <cognus-description
+              description=" Run any of the following functions to test output on the console.
+                    Switch to production environment if required by uncommenting the
+                    enviroment on the script."
+            ></cognus-description>
+          </div>
+          <div class="w-2/3"></div>
+        </div>
+
+        <cognus-hr></cognus-hr>
+
+        <div class="md:flex mb-4 mt-4">
+          <div class="lg:w-1/3 md:w-1/2 mb-6 pr-2 sm:mb-3">
+            <cognus-description
+              title="Basics"
+              description="Here we cover some basic functions that allow us to check if some
+              details like encryption is being well set."
+            ></cognus-description>
+          </div>
+          <div class="md:w-2/3 sm:flex flex-wrap">
+            <cognus-card
+              class="sm:w-1/2 lg:w-1/3 pr-2 mb-3"
+              name="Encrypt string"
+              category="Encryption"
+              onclick="encryptString('cognus')"
+            >
+            </cognus-card>
+            <cognus-card
+              class="sm:w-1/2 lg:w-1/3 pr-2 mb-3"
+              name="Encrypt Payload"
+              category="Encryption"
+              onclick="encryptPayload()"
+            >
+            </cognus-card>
+            <cognus-card
+              class="sm:w-1/2 lg:w-1/3 pr-2 mb-3"
+              name="Decrypt Payload"
+              category="Encryption"
+              onclick="decryptPayload()"
+            >
+            </cognus-card>
+          </div>
+        </div>
+        <cognus-hr></cognus-hr>
+
+        <div class="md:flex mb-4 mt-4">
+          <div class="lg:w-1/3 md:w-1/2 mb-6 pr-2 sm:mb-3">
+            <cognus-description
+              title="Authentication"
+              description="Here we cover the most complex authentitcation methods."
+            ></cognus-description>
+          </div>
+          <div class="md:w-2/3 sm:flex flex-wrap">
+            <cognus-card
+              class="sm:w-1/2 lg:w-1/3 pr-2 mb-3"
+              name="Authentication"
+              category="Api Login"
+              onclick="login()"
+            >
+            </cognus-card>
+            <cognus-card
+              class="sm:w-1/2 lg:w-1/3 pr-2 mb-3"
+              name="Authentication"
+              category="Chatbot Login"
+              onclick="loginChatbot()"
+            >
+            </cognus-card>
+          </div>
+        </div>
+
+        <cognus-hr></cognus-hr>
+
+        <div class="md:flex  mb-4 mt-4">
+          <div class="lg:w-1/3 md:w-1/2 mb-6 pr-2 sm:mb-3">
+            <cognus-description
+              title="Audio"
+              description="Functions are related to handling audio data and process it's
+              content"
+            ></cognus-description>
+          </div>
+          <div class="md:w-2/3 sm:flex flex-wrap">
+            <cognus-card
+              class="sm:w-1/2 lg:w-1/3 pr-2 mb-3"
+              name="Audio"
+              category="Start Recording"
+              onclick="startRecording()"
+            >
+            </cognus-card>
+            <cognus-card
+              class="sm:w-1/2 lg:w-1/3 pr-2 mb-3"
+              name="Audio"
+              category="Start Recording"
+              onclick="stopRecording()"
+            >
+            </cognus-card>
+            <cognus-card
+              class="sm:w-1/2 lg:w-1/3 pr-2 mb-3"
+              name="Audio"
+              category="Start Recording"
+              onclick="getTextFromAudio()"
+            >
+            </cognus-card>
+          </div>
+        </div>
+      </div>
+      <!-- ... -->
+    </div>
+
+    <script src="dist/index.js"></script>
+  </body>
+</html>
