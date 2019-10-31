@@ -254,15 +254,6 @@ document.registerElement("cognus-repeat", CognusRepeat);
 window.onload = function() {
   function setSimplebar() {
     new SimpleBar(document.getElementById("container"));
-    setTimeout(() => {
-      const $els = document.getElementsByClassName("simplebar-offset");
-      const $$els = document.getElementsByClassName(
-        "simplebar-content-wrapper"
-      );
-      $els.forEach($el => {
-        $el.style.width = "100% ";
-      });
-    }, 10);
   }
   setTimeout(() => {
     setSimplebar();
